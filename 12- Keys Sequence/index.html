@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Drums</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="master.css">
+    
+  </head>
+  <body>
+    
+    <!-- Start Page Content -->
+    <div class="page-content">
+      
+    </div>
+    <!-- End Page Content -->
+    
+    <!-- JS Scripts  -->
+    <script>
+      let pressed = [];
+      const secret = "amrhus";
+      window.addEventListener('keyup', e => {
+        pressed.push(e.key);
+        pressed.splice(-secret.length, pressed.length - secret.length);
+        if(pressed.join('').includes(secret)) console.log('Ten Ten!');
+      });
+    </script>
+  </body>
+</html>
