@@ -1,0 +1,74 @@
+/* ----------------------------- Start Work Sans ------------------------------*/
+@font-face {
+  font-family: 'Work Sans';
+  src: url('work-sans/worksans-regular-webfont.woff2') format('woff2'),
+  url('work-sans/worksans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'Work Sans';
+    src: url('work-sans/worksans-medium-webfont.woff2') format('woff2'),
+         url('work-sans/worksans-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('work-sans/worksans-semibold-webfont.woff2') format('woff2'),
+  url('work-sans/worksans-semibold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('work-sans/worksans-bold-webfont.woff2') format('woff2'),
+  url('work-sans/worksans-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('work-sans/worksans-extrabold-webfont.woff2') format('woff2'),
+  url('work-sans/worksans-extrabold-webfont.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Work Sans';
+  src: url('work-sans/worksans-black-webfont.woff2') format('woff2'),
+  url('work-sans/worksans-black-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+/* ----------------------------- End Work Sans ------------------------------*/
+/* ----------------------------- Start Droid ------------------------------*/
+@font-face {
+    font-family: 'Droid Arabic';
+    src: url('Droid Kufi/arbfonts-droid_arabic_kufi-webfont.woff2') format('woff2'),
+         url('Droid Kufi/arbfonts-droid_arabic_kufi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Droid Arabic';
+    src: url('Droid Kufi/arbfonts-droid-arabic-kufi-webfont.woff2') format('woff2'),
+         url('Droid Kufi/arbfonts-droid-arabic-kufi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Droid Arabic';
+    src: url('Droid Kufi/arbfonts-droid_arabic_kufi_bold-webfont.woff2') format('woff2'),
+         url('Droid Kufi/arbfonts-droid_arabic_kufi_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Droid Arabic';
+    src: url('Droid Kufi/arbfonts-droid-arabic-kufi-bold-webfont.woff2') format('woff2'),
+         url('Droid Kufi/arbfonts-droid-arabic-kufi-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+/* ----------------------------- End Droid ------------------------------*/

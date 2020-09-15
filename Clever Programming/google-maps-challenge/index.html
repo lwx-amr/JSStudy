@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Store Locator</title>
+
+      <!-- Style -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/master.css">
+  
+      <!-- Fonts -->
+      <link rel="stylesheet" href="fonts/font-face.css">
+
+  </head>
+  <body>
+    
+    <!-- Start Page Content -->
+    <div class="page-content">
+      <!-- Start Map Container -->
+      <div id="map"></div>
+      <!-- End Map Container -->
+      <div class="main-wrapper">
+        <h2 class="title">Store Locator</h2>
+        <div class="wrapper-body">
+          <div class="search-box">
+            <input type="text" name="search" id="search" placeholder="Enter zip">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="store-list-container">
+            <div class="store-list">
+              <div class="store-element">
+                <div class="details">
+                  <ul class="list-unstyled">
+                    <li>8480 Beverly Blvd</li>
+                    <li>Los Angeles, CA 90048</li>
+                  </ul>
+                  <span class="phone">(950) 715-9938</span>
+                </div>
+                <div class="el-number">1</div>
+              </div>
+              <div class="store-element">
+                <div class="details">
+                  <ul class="list-unstyled">
+                    <li>8480 Beverly Blvd</li>
+                    <li>Los Angeles, CA 90048</li>
+                  </ul>
+                  <span class="phone">(950) 715-9938</span>
+                </div>
+                <div class="el-number">2</div>
+              </div>
+              <div class="store-element">
+                <div class="details">
+                  <ul class="list-unstyled">
+                    <li>8480 Beverly Blvd</li>
+                    <li>Los Angeles, CA 90048</li>
+                  </ul>
+                  <span class="phone">(950) 715-9938</span>
+                </div>
+                <div class="el-number">3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Page Content -->
+
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcwazb-T7zvceyA4VLWVB-eXvwj-XEUIA&callback=initMap">
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

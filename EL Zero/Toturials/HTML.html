@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Welcome bro, this is Mr Amr, hope you find here all you want, good luck">
+		<link rel="stylesheet" href="css.css">
+        <style></style>
+		<script>
+		</script>
+    </head>
+    <body>
+		<input id="myInput" type="text" value="" placeholder="Username " onfocus="this.placeholder=''" onblur="this.placeholder='Username'">
+		<div id="myDiv"></div>
+		<button onclick="reDirectMe('http://www.google.com')" target="_blank">Go Now</button>
+		<form>
+			<input id="password" type="password" value="">
+			<br>
+			<input type="checkbox" onchange="document.getElementById('password').type=this.checked ? 'type':'password'" ><label>Show Password</label>
+		</form>
+		<p id="pType" dataText="Hello This is Mr DarK, you're not welcome here, When counter ends, you will die"></p>
+		<button id="showPassword">Show Password</button>
+		<button id="type">Type Start</button>
+		<button id="goUp">Go Up</button>
+		<h2>This is Random Color test</h2>
+		<p>This is Random color test</p>
+		<br><br>
+		<input id="title" type="text">
+		<form>
+			<textarea id="content" style="width:180px;display: block;" maxlength="230"></textarea>
+			<!--<span id="chars">10/</span>-->
+			<div id="max">230</div>
+		</form>
+		<h2 id="titleLive"></h2>
+		<div id="contentLive"></div>
+		<div id="myClock"></div>
+		<button id="Generate" onclick="generateSerial()">Generate</button>
+		<div id="serial"></div>
+        <script src="Tutorial-1.js"></script>
+    </body>
+</html>

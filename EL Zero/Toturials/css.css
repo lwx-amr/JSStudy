@@ -1,0 +1,52 @@
+body 
+{
+	height: 4000px;
+}
+button#goUp
+{
+	background: #12AAA3;
+	padding: 10px 20px;
+	display: none;
+	position: fixed;
+	right: 10px;
+}
+.class1
+{
+	color: red;
+	
+}
+.class3
+{
+	color: blue;
+	
+}
+.class2
+{
+	color: #12AAA3;
+	
+}
+.class4
+{
+	color:yellow;
+	
+}
+div#myClock
+{
+	background: #12AAA3;
+	text-align: center;
+	width:50px;
+	padding: 10px 30px;
+	color: #fff;
+	position: fixed;
+	right: 10px;
+	top: 10px;
+}
+form{width: 260px;}
+div#max,span#chars
+{
+	width: 100px;
+	color: #ccc;
+	font-size: 12px;
+	float: right;
+	display: inline;
+}
