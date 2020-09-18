@@ -1,0 +1,23 @@
+<body>
+    <div id="root">
+
+    </div>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script type="text/babel">
+        const rootElement = document.getElementById('root')
+        const children = 'Hello There! I\'m here'
+        const className = 'pretty'
+        const props = {className, children}
+        const helloSpan = <span id="test" {...props} className="not-pretty"></span>
+        const anotherSpan = <span>, Look at me</span>
+        const element = (
+            <React.Fragment>
+                {helloSpan}
+                {anotherSpan}    
+            </React.Fragment>
+        )
+        ReactDOM.render(element, rootElement);
+    </script>
+</body>
