@@ -1,0 +1,74 @@
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script type="text/babel">
+        function SimpleUsernameForm(){
+            // const usernameInputRef = React.useRef()
+            function handleSubmit(e){
+                e.preventDefault()
+                console.dir(e.target)
+                const username = e.target.elements.username.value // This is the simplest way
+                // const username = usernameInputRef.current.value;
+                alert(`Username: ${username}`)
+            }
+            return (
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label htmlFor="username">Username</label>
+                        <input /*ref={usernameInputRef}*/ type="text" id="username" name="username"/>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            )
+        }
+        function DynamicUsernameForm(){
+            const [username, setUserName] = React.useState('')
+            const isLowerCase = username === username.toLowerCase()
+            const error = isLowerCase ? null : 'username Must be lower Case'
+            function handleSubmit(e){
+                e.preventDefault()
+                console.dir(e.target)
+                alert(`Username: ${username}`)
+            }
+            function handleChange(e) {
+                setUserName(e.target.value)
+            }
+            return (
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label htmlFor="username">Username</label>
+                        <input type="text" id="username" name="username" onChange={handleChange} />
+                    </div>
+                    {
+                        (error) ? <div style={{ color: 'red' }}>{error}</div> : ''
+                    }
+                    <button disabled = {Boolean(error)} type="submit">Submit</button>
+                </form>
+            )
+        }
+        function UsernameFormWithNoErrors(){
+            const [username, setUserName] = React.useState('')
+            function handleSubmit(e){
+                e.preventDefault()
+                alert(`Username: ${username}`)
+            }
+            function handleChange(e) {
+                setUserName(e.target.value.toLowerCase())
+            }
+            return (
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label htmlFor="username">Username "No Uppercase"</label>
+                        <input type="text" id="username" name="username" value={username} onChange={handleChange} />
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            )
+        }
+        // ReactDOM.render(<SimpleUsernameForm />, document.getElementById('root'));
+        // ReactDOM.render(<DynamicUsernameForm />, document.getElementById('root'));
+        ReactDOM.render(<UsernameFormWithNoErrors />, document.getElementById('root'));
+    </script>
+  </body>
