@@ -5,7 +5,10 @@
     <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
     <script type="text/babel">
+        const rootElement = document.getElementById('root')
+        /*  -- From Beginning -- 
         const rootElement = document.getElementById('root')
         const children = 'Hello There! I\'m here'
         const className = 'pretty'
@@ -18,6 +21,43 @@
                 {anotherSpan}    
             </React.Fragment>
         )
-        ReactDOM.render(element, rootElement);
+        To Fragment (6)*/
+        const Message = props => <div className="message">{props.children}</div>
+        const element = (
+            <div class="container">
+                <Message>
+                    Hello World!
+                    <Message>Goodbye World!</Message>
+                    <span>Too Soon</span>
+                </Message>
+            </div>
+        )
+        function SayHello({firstName, lastName}){
+            return (
+                <div>
+                    Hello {firstName} {lastName} !    
+                </div>
+            )
+        }
+        SayHello.propTypes = {
+            firstName: PropTypes.string.isRequired,
+            lastName: PropTypes.string.isRequired
+        }
+        const elementND = <SayHello firstName={false} />
+        function CharacterCount({text}) {
+            const num = (text.length ==0)? 'No': text.length;
+            return (
+                <div>
+                    `The Text {text} has {num} characters`    
+                </div>
+            )
+        }
+        const elementRD = (
+            <>
+                <CharacterCount text="Hello World"/>
+                <CharacterCount text=""/>
+            </>
+        )
+        ReactDOM.render([element, elementND, elementRD], rootElement)
     </script>
 </body>
